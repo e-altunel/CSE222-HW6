@@ -36,9 +36,11 @@ public class QuickSort extends SortAlgorithm {
     }
 
     comparison_counter += 1; // Increment the comparison counter
-    if (arr[low] > arr[pivot])
+    if (arr[low] > arr[pivot]) {
       swap(low, pivot); // Swap the pivot with the element at the low index
-    return low;         // Return the low index
+      return low;       // Return the low index
+    }
+    return pivot; // Return the pivot index
   }
 
   private void sort(int low, int high) {
